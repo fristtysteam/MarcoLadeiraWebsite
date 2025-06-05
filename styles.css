@@ -2849,4 +2849,121 @@ body.dark-mode .project-card {
 .contact-info {
     position: relative;
     z-index: 2;
-} 
+}
+
+.about-education-links {
+    margin: 2.5rem 0 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+}
+
+.education-block {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    background: rgba(59, 130, 246, 0.07);
+    padding: 0.7rem 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.07);
+    animation: fadeInLeft 1s;
+}
+
+.education-block i {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    color: var(--accent-color);
+    animation: bounce 2s infinite;
+}
+
+.degree {
+    margin: 0 0.2rem;
+}
+
+.divider {
+    color: var(--accent-color);
+    font-weight: 700;
+    margin: 0 0.5rem;
+}
+
+.about-links {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.about-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.4rem;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--white);
+    background: var(--primary-color);
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.13);
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 1.2s;
+}
+
+.about-link.linkedin {
+    background: #0a66c2;
+}
+
+.about-link.github {
+    background: #24292e;
+}
+
+.about-link i {
+    font-size: 1.3rem;
+    transition: transform 0.3s;
+}
+
+.about-link:hover {
+    background: var(--accent-color);
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.18);
+}
+
+.about-link:hover i {
+    transform: scale(1.2) rotate(-8deg);
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-7px); }
+}
+
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .about-education-links {
+        align-items: stretch;
+    }
+    .education-block {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+        font-size: 1rem;
+    }
+    .about-links {
+        flex-direction: column;
+        gap: 0.7rem;
+    }
+}
