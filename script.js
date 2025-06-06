@@ -488,7 +488,7 @@ document.addEventListener('DOMContentLoaded', function() {
         emailjs.send("service_icwhz7m", "template_k5s85cq", {
             from_name: name,
             from_email: email,
-            message: message,
+            message: `Email: ${email}\n\nMessage: ${message}`,
             to_email: "marcoladeiraworkemail@gmail.com"
         })
         .then(function() {
